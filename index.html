@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>嘎嘎射击 - Quack Strike</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="phone-shell" aria-label="嘎嘎射击手机页面">
+      <header class="app-header">
+        <div class="brand">
+          <img class="brand-logo" src="assets/brand-logo.png" alt="嘎嘎射击" />
+        </div>
+        <button class="menu-button" type="button" aria-label="打开菜单">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-tabs" aria-label="页面栏目">
+          <button type="button" data-tab="start">开整!</button>
+          <button class="active" type="button" data-tab="field">欢乐失控指南</button>
+          <button type="button" data-tab="squad">嘎友聚集地</button>
+        </nav>
+      </header>
+
+      <section class="menu-panel" aria-hidden="true">
+        <button type="button">战备档案</button>
+        <button type="button">每日挑战</button>
+        <button type="button">设置</button>
+      </section>
+
+      <div class="rail rail-left"></div>
+      <div class="rail rail-right"></div>
+
+      <section class="hero-band" aria-label="开场信息">
+        <span class="label-tag">全新版本上线</span>
+        <strong>立即开整!</strong>
+        <em>小心嘎了!</em>
+      </section>
+
+      <div class="ticker" aria-label="小心嘎了警戒线">
+        <div class="ticker-track" aria-hidden="true">
+          <img src="assets/warning-strip.png" alt="" />
+          <img src="assets/warning-strip.png" alt="" />
+          <img src="assets/warning-strip.png" alt="" />
+          <img src="assets/warning-strip.png" alt="" />
+        </div>
+      </div>
+
+      <section class="card-stack" aria-label="角色和玩法入口">
+        <article class="feature-card weapon-card" role="button" tabindex="0" aria-label="打开武器库武器卡片">
+          <div class="card-copy">
+            <span>失控冒火赛</span>
+            <h2>武器库!</h2>
+          </div>
+          <img class="character gunner" src="assets/character-gunner.png" alt="持枪鸭子角色" />
+          <b class="announce">全平台公测中!</b>
+        </article>
+
+        <article class="feature-card hero-card" role="button" tabindex="0" aria-label="打开英雄库角色卡片">
+          <div class="card-copy">
+            <span>失控艺术家</span>
+            <h2>英雄库!</h2>
+          </div>
+          <img class="character bomber" src="assets/character-bomber.png" alt="炸弹紫鸟角色" />
+          <b class="announce">全平台公测中!</b>
+        </article>
+
+        <article class="feature-card mode-card" role="button" tabindex="0" aria-label="打开模式库玩法卡片">
+          <div class="card-copy">
+            <span>即兴演出算啥</span>
+            <h2>模式库!</h2>
+          </div>
+          <img class="character rocker" src="assets/character-rocker.png" alt="吉他鸟角色" />
+          <b class="announce">全平台公测中!</b>
+        </article>
+
+        <article class="hot-card" tabindex="0" aria-label="打开社区热议官方入口">
+          <div>
+            <h2>社区热议</h2>
+            <p>查看鸭友们的翻车整活</p>
+          </div>
+          <button type="button" aria-label="进入社区热议">→</button>
+        </article>
+      </section>
+
+      <footer class="bottom-cta">
+        <button class="share-button" type="button">分享</button>
+        <button class="download-button" type="button">立即下载</button>
+      </footer>
+    </main>
+
+    <section class="hero-gallery weapon-gallery" aria-hidden="true" aria-label="武器库武器卡片">
+      <div class="hero-gallery__panel weapon-gallery__panel" role="dialog" aria-modal="true" aria-label="武器库">
+        <button class="hero-gallery__close weapon-gallery__close" type="button" aria-label="关闭武器库">×</button>
+        <div class="hero-gallery__stage">
+          <button class="hero-gallery__arrow hero-gallery__arrow--prev weapon-gallery__arrow--prev" type="button" aria-label="上一个武器">‹</button>
+          <div class="hero-gallery__viewport">
+            <div class="hero-gallery__track weapon-gallery__track">
+              <figure class="hero-gallery__slide"><img src="assets/weapon-gallery/card-0.png" alt="坦克武器卡片" /></figure>
+              <figure class="hero-gallery__slide"><img src="assets/weapon-gallery/card-1.png" alt="空袭导弹武器卡片" /></figure>
+              <figure class="hero-gallery__slide"><img src="assets/weapon-gallery/card-2.png" alt="直升机武器卡片" /></figure>
+              <figure class="hero-gallery__slide"><img src="assets/weapon-gallery/card-3.png" alt="导弹无人机武器卡片" /></figure>
+              <figure class="hero-gallery__slide"><img src="assets/weapon-gallery/card-4.png" alt="重型防御机枪武器卡片" /></figure>
+              <figure class="hero-gallery__slide"><img src="assets/weapon-gallery/card-5.png" alt="导弹无人机武器卡片" /></figure>
+            </div>
+          </div>
+          <button class="hero-gallery__arrow hero-gallery__arrow--next weapon-gallery__arrow--next" type="button" aria-label="下一个武器">›</button>
+        </div>
+        <div class="hero-gallery__thumbs weapon-gallery__thumbs" aria-label="武器缩略图">
+          <button class="active" type="button" data-weapon-index="0" aria-label="查看坦克"><img src="assets/weapon-gallery/thumb-0.png" alt="" /></button>
+          <button type="button" data-weapon-index="1" aria-label="查看空袭导弹"><img src="assets/weapon-gallery/thumb-1.png" alt="" /></button>
+          <button type="button" data-weapon-index="2" aria-label="查看直升机"><img src="assets/weapon-gallery/thumb-2.png" alt="" /></button>
+          <button type="button" data-weapon-index="3" aria-label="查看导弹无人机"><img src="assets/weapon-gallery/thumb-3.png" alt="" /></button>
+          <button type="button" data-weapon-index="4" aria-label="查看重型防御机枪"><img src="assets/weapon-gallery/thumb-4.png" alt="" /></button>
+          <button type="button" data-weapon-index="5" aria-label="查看导弹无人机"><img src="assets/weapon-gallery/thumb-5.png" alt="" /></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-gallery" aria-hidden="true" aria-label="英雄库角色卡片">
+      <div class="hero-gallery__panel" role="dialog" aria-modal="true" aria-label="英雄库">
+        <button class="hero-gallery__close" type="button" aria-label="关闭英雄库">×</button>
+        <div class="hero-gallery__stage">
+          <button class="hero-gallery__arrow hero-gallery__arrow--prev" type="button" aria-label="上一个角色">‹</button>
+          <div class="hero-gallery__viewport">
+            <div class="hero-gallery__track">
+              <figure class="hero-gallery__slide"><img src="assets/hero-gallery/card-0.png" alt="嘎嘎鸭角色卡片" /></figure>
+              <figure class="hero-gallery__slide"><img src="assets/hero-gallery/card-1.png" alt="爆裂鸟角色卡片" /></figure>
+              <figure class="hero-gallery__slide"><img src="assets/hero-gallery/card-2.png" alt="战斗鸡角色卡片" /></figure>
+              <figure class="hero-gallery__slide"><img src="assets/hero-gallery/card-3.png" alt="鹦乐鸟角色卡片" /></figure>
+              <figure class="hero-gallery__slide"><img src="assets/hero-gallery/card-4.png" alt="工程兔角色卡片" /></figure>
+            </div>
+          </div>
+          <button class="hero-gallery__arrow hero-gallery__arrow--next" type="button" aria-label="下一个角色">›</button>
+        </div>
+        <div class="hero-gallery__thumbs" aria-label="角色缩略图">
+          <button class="active" type="button" data-hero-index="0" aria-label="查看嘎嘎鸭"><img src="assets/hero-gallery/thumb-0.png" alt="" /></button>
+          <button type="button" data-hero-index="1" aria-label="查看爆裂鸟"><img src="assets/hero-gallery/thumb-1.png" alt="" /></button>
+          <button type="button" data-hero-index="2" aria-label="查看战斗鸡"><img src="assets/hero-gallery/thumb-2.png" alt="" /></button>
+          <button type="button" data-hero-index="3" aria-label="查看鹦乐鸟"><img src="assets/hero-gallery/thumb-3.png" alt="" /></button>
+          <button type="button" data-hero-index="4" aria-label="查看工程兔"><img src="assets/hero-gallery/thumb-4.png" alt="" /></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-gallery mode-gallery" aria-hidden="true" aria-label="模式库玩法卡片">
+      <div class="hero-gallery__panel mode-gallery__panel" role="dialog" aria-modal="true" aria-label="模式库">
+        <button class="hero-gallery__close mode-gallery__close" type="button" aria-label="关闭模式库">×</button>
+        <div class="hero-gallery__stage">
+          <button class="hero-gallery__arrow hero-gallery__arrow--prev mode-gallery__arrow--prev" type="button" aria-label="上一个模式">‹</button>
+          <div class="hero-gallery__viewport">
+            <div class="hero-gallery__track mode-gallery__track">
+              <figure class="hero-gallery__slide"><img src="assets/mode-gallery/card-0.png" alt="团队竞技模式卡片" /></figure>
+              <figure class="hero-gallery__slide"><img src="assets/mode-gallery/card-1.png" alt="平台争霸模式卡片" /></figure>
+              <figure class="hero-gallery__slide"><img src="assets/mode-gallery/card-2.png" alt="夺金模式卡片" /></figure>
+            </div>
+          </div>
+          <button class="hero-gallery__arrow hero-gallery__arrow--next mode-gallery__arrow--next" type="button" aria-label="下一个模式">›</button>
+        </div>
+        <div class="hero-gallery__thumbs mode-gallery__thumbs" aria-label="模式缩略图">
+          <button class="active" type="button" data-mode-index="0" aria-label="查看团队竞技"><img src="assets/mode-gallery/thumb-0.png" alt="" /></button>
+          <button type="button" data-mode-index="1" aria-label="查看平台争霸"><img src="assets/mode-gallery/thumb-1.png" alt="" /></button>
+          <button type="button" data-mode-index="2" aria-label="查看夺金模式"><img src="assets/mode-gallery/thumb-2.png" alt="" /></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="community-page" aria-hidden="true" aria-label="社区热议官方入口">
+      <div class="community-page__panel" role="dialog" aria-modal="true" aria-label="社区热议">
+        <button class="community-page__close" type="button" aria-label="关闭社区热议">×</button>
+        <div class="community-page__art">
+          <img class="community-page__base" src="assets/community-page.png" alt="关注我们，获取最新资讯与福利" />
+          <button class="community-link community-link--qq" type="button" aria-label="官方QQ群">
+            <img src="assets/community/button-qq.png" alt="" />
+          </button>
+          <button class="community-link community-link--wechat" type="button" aria-label="官方公众号">
+            <img src="assets/community/button-wechat.png" alt="" />
+          </button>
+          <button class="community-link community-link--douyin" type="button" aria-label="官方抖音">
+            <img src="assets/community/button-douyin.png" alt="" />
+          </button>
+          <button class="community-link community-link--kuaishou" type="button" aria-label="官方快手">
+            <img src="assets/community/button-kuaishou.png" alt="" />
+          </button>
+          <button class="community-link community-link--haoyou" type="button" aria-label="好游快爆">
+            <img src="assets/community/button-haoyou.png" alt="" />
+          </button>
+          <button class="community-link community-link--taptap" type="button" aria-label="TapTap">
+            <img src="assets/community/button-taptap.png" alt="" />
+          </button>
+          <img class="community-page__badge" src="assets/community/bottom-badge-clean.png" alt="" aria-hidden="true" />
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
