@@ -1999,3 +1999,95 @@ button {
     display: none;
   }
 }
+
+/* Mixed frame language: sharper action panels with curved, asymmetric rhythm. */
+.feature-card {
+  border-radius: 26px 8px 38px 12px / 18px 8px 28px 14px;
+}
+
+.feature-card::before {
+  border-radius: 22px 6px 32px 10px / 16px 6px 24px 12px;
+}
+
+.feature-card::after {
+  border-radius: 18px 4px 26px 8px / 12px 4px 20px 10px;
+}
+
+.weapon-card {
+  border-radius: 8px 34px 12px 42px / 8px 22px 12px 28px;
+}
+
+.weapon-card::before {
+  border-radius: 6px 28px 10px 34px / 6px 18px 10px 24px;
+}
+
+.weapon-card::after {
+  border-radius: 4px 22px 8px 28px / 4px 14px 8px 20px;
+}
+
+.hero-card {
+  border-radius: 44px 10px 34px 8px / 30px 10px 24px 8px;
+}
+
+.hero-card::before {
+  border-radius: 36px 8px 28px 6px / 24px 8px 20px 6px;
+}
+
+.hero-card::after {
+  border-radius: 28px 6px 22px 4px / 18px 6px 16px 4px;
+}
+
+.mode-card {
+  border-radius: 18px 52px 10px 36px / 14px 34px 10px 26px;
+}
+
+.mode-card::before {
+  border-radius: 14px 42px 8px 30px / 12px 28px 8px 22px;
+}
+
+.mode-card::after {
+  border-radius: 10px 34px 6px 24px / 8px 22px 6px 18px;
+}
+
+.card-copy span,
+.label-tag {
+  border-radius: 4px 18px 5px 14px / 4px 12px 5px 10px;
+}
+
+.card-copy h2 {
+  border-radius: 8px 22px 6px 16px / 7px 16px 6px 13px;
+}
+
+.weapon-card .card-copy h2 {
+  border-radius: 6px 28px 8px 10px / 6px 18px 8px 10px;
+}
+
+.hero-card .card-copy h2 {
+  border-radius: 24px 7px 18px 6px / 18px 7px 14px 6px;
+}
+
+.mode-card .card-copy h2 {
+  border-radius: 10px 32px 7px 22px / 8px 22px 7px 16px;
+}
+
+.announce {
+  border-radius: 22px 6px 18px 7px / 16px 6px 13px 7px;
+}
+
+.hot-card {
+  border-radius: 28px 8px 34px 10px / 20px 8px 24px 10px;
+}
+
+.hot-card button,
+.menu-button,
+.hero-gallery__close {
+  border-radius: 12px 5px 14px 6px / 10px 5px 12px 6px;
+}
+
+.hero-gallery__arrow {
+  border-radius: 14px 6px 14px 6px / 18px 6px 18px 6px;
+}
+
+.hero-gallery__thumbs button::after {
+  border-radius: 18px 6px 16px 7px / 15px 6px 14px 7px;
+}
