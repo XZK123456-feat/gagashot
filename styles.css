@@ -1,16 +1,5 @@
 :root {
-  --font-display: "Zihun Yuwan Local", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
-}
-
-@font-face {
-  font-family: "Zihun Yuwan Local";
-  src: url("file:///C:/USERS/XIAOZIKANG/APPDATA/LOCAL/MICROSOFT/WINDOWS/FONTS/字魂鱼丸体(商用需授权).TTF") format("truetype");
-  font-weight: 400 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-:root {
+  --font-display: "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
   --ink: #101010;
   --panel: #181818;
   --panel-2: #242424;
@@ -46,6 +35,175 @@ body {
 button {
   font: inherit;
   line-height: 1;
+}
+
+.nav-tabs button,
+.menu-panel button,
+.label-tag,
+.hero-band strong,
+.hero-band em,
+.card-copy span,
+.card-copy h2,
+.announce,
+.hot-card h2,
+.hot-card p,
+.share-button,
+.download-button {
+  color: transparent !important;
+  font-size: 0 !important;
+}
+
+.nav-tabs button::before,
+.menu-panel button::before,
+.label-tag::before,
+.hero-band strong::before,
+.hero-band em::before,
+.card-copy span::before,
+.card-copy h2::before,
+.announce::before,
+.hot-card h2::before,
+.hot-card p::before,
+.share-button::before,
+.download-button::before {
+  content: "";
+  display: block;
+  width: var(--text-img-w);
+  height: var(--text-img-h);
+  max-width: 100%;
+  background: var(--text-img) center / contain no-repeat;
+  pointer-events: none;
+}
+
+.nav-tabs button[data-tab="start"] {
+  --text-img: url("assets/text/nav-start-white.png");
+  --text-img-w: 52px;
+  --text-img-h: 24px;
+}
+
+.nav-tabs button[data-tab="start"].active {
+  --text-img: url("assets/text/nav-start-black.png");
+}
+
+.nav-tabs button[data-tab="field"] {
+  --text-img: url("assets/text/nav-guide-white.png");
+  --text-img-w: 108px;
+  --text-img-h: 24px;
+}
+
+.nav-tabs button[data-tab="field"].active {
+  --text-img: url("assets/text/nav-guide-black.png");
+}
+
+.nav-tabs button[data-tab="squad"] {
+  --text-img: url("assets/text/nav-community-white.png");
+  --text-img-w: 94px;
+  --text-img-h: 24px;
+}
+
+.nav-tabs button[data-tab="squad"].active {
+  --text-img: url("assets/text/nav-community-black.png");
+}
+
+.menu-panel button:nth-child(1) {
+  --text-img: url("assets/text/menu-archive.png");
+  --text-img-w: 106px;
+  --text-img-h: 28px;
+}
+
+.menu-panel button:nth-child(2) {
+  --text-img: url("assets/text/menu-daily.png");
+  --text-img-w: 106px;
+  --text-img-h: 28px;
+}
+
+.menu-panel button:nth-child(3) {
+  --text-img: url("assets/text/menu-settings.png");
+  --text-img-w: 64px;
+  --text-img-h: 28px;
+}
+
+.label-tag {
+  --text-img: url("assets/text/hero-tag.png");
+  --text-img-w: 157px;
+  --text-img-h: 29px;
+}
+
+.hero-band strong {
+  --text-img: url("assets/text/hero-title.png");
+  --text-img-w: 360px;
+  --text-img-h: 105px;
+}
+
+.hero-band em {
+  --text-img: url("assets/text/hero-subtitle.png");
+  --text-img-w: 278px;
+  --text-img-h: 76px;
+}
+
+.weapon-card .card-copy span {
+  --text-img: url("assets/text/weapon-eyebrow.png");
+  --text-img-w: 106px;
+  --text-img-h: 28px;
+}
+
+.weapon-card .card-copy h2 {
+  --text-img: url("assets/text/weapon-title.png");
+  --text-img-w: 182px;
+  --text-img-h: 72px;
+}
+
+.hero-card .card-copy span {
+  --text-img: url("assets/text/hero-eyebrow.png");
+  --text-img-w: 106px;
+  --text-img-h: 28px;
+}
+
+.hero-card .card-copy h2 {
+  --text-img: url("assets/text/hero-card-title.png");
+  --text-img-w: 182px;
+  --text-img-h: 72px;
+}
+
+.mode-card .card-copy span {
+  --text-img: url("assets/text/mode-eyebrow.png");
+  --text-img-w: 124px;
+  --text-img-h: 28px;
+}
+
+.mode-card .card-copy h2 {
+  --text-img: url("assets/text/mode-title.png");
+  --text-img-w: 182px;
+  --text-img-h: 72px;
+}
+
+.announce {
+  --text-img: url("assets/text/announce-live.png");
+  --text-img-w: 133px;
+  --text-img-h: 28px;
+}
+
+.hot-card h2 {
+  --text-img: url("assets/text/hot-title.png");
+  --text-img-w: 164px;
+  --text-img-h: 52px;
+}
+
+.hot-card p {
+  --text-img: url("assets/text/hot-subtitle.png");
+  --text-img-w: 253px;
+  --text-img-h: 26px;
+}
+
+.share-button {
+  --text-img: url("assets/text/share.png");
+  --text-img-w: 76px;
+  --text-img-h: 44px;
+}
+
+.download-button {
+  --text-img: url("assets/text/download.png");
+  --text-img-w: 148px;
+  --text-img-h: 50px;
 }
 
 .phone-shell {
@@ -671,10 +829,6 @@ button {
   border-radius: 0 !important;
   box-shadow: none !important;
   text-shadow: 3px 3px 0 #000;
-}
-
-.share-button::before {
-  content: none;
 }
 
 .download-button {
@@ -1627,6 +1781,21 @@ button {
     font-size: 22px;
   }
 
+  .nav-tabs button[data-tab="start"] {
+    --text-img-w: 100px;
+    --text-img-h: 40px;
+  }
+
+  .nav-tabs button[data-tab="field"] {
+    --text-img-w: 250px;
+    --text-img-h: 40px;
+  }
+
+  .nav-tabs button[data-tab="squad"] {
+    --text-img-w: 220px;
+    --text-img-h: 40px;
+  }
+
   .menu-button {
     display: none;
   }
@@ -1644,18 +1813,24 @@ button {
 
   .label-tag {
     font-size: 23px;
+    --text-img-w: 220px;
+    --text-img-h: 42px;
   }
 
   .hero-band strong {
     margin-top: 26px;
     font-size: 118px;
     text-shadow: 9px 10px 0 #000;
+    --text-img-w: 520px;
+    --text-img-h: 152px;
   }
 
   .hero-band em {
     margin-top: 18px;
     font-size: 74px;
     text-shadow: 8px 9px 0 #000;
+    --text-img-w: 420px;
+    --text-img-h: 110px;
   }
 
   .ticker {
@@ -1698,9 +1873,22 @@ button {
     font-size: 21px;
   }
 
+  .weapon-card .card-copy span,
+  .hero-card .card-copy span {
+    --text-img-w: 155px;
+    --text-img-h: 40px;
+  }
+
+  .mode-card .card-copy span {
+    --text-img-w: 184px;
+    --text-img-h: 40px;
+  }
+
   .card-copy h2 {
     padding: 13px 24px 15px;
     font-size: 58px;
+    --text-img-w: 278px;
+    --text-img-h: 102px;
   }
 
   .gunner {
@@ -1723,6 +1911,8 @@ button {
     bottom: -33px;
     padding: 14px 21px 16px;
     font-size: 21px;
+    --text-img-w: 190px;
+    --text-img-h: 40px;
   }
 
   .hot-card {
@@ -1732,10 +1922,14 @@ button {
 
   .hot-card h2 {
     font-size: 46px;
+    --text-img-w: 228px;
+    --text-img-h: 74px;
   }
 
   .hot-card p {
     font-size: 22px;
+    --text-img-w: 360px;
+    --text-img-h: 38px;
   }
 
   .hot-card button {
@@ -1758,6 +1952,16 @@ button {
   .bottom-cta button {
     min-height: 82px;
     font-size: 32px;
+  }
+
+  .share-button {
+    --text-img-w: 118px;
+    --text-img-h: 60px;
+  }
+
+  .download-button {
+    --text-img-w: 230px;
+    --text-img-h: 70px;
   }
 
   .hero-gallery__panel {
