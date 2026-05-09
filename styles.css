@@ -1974,3 +1974,28 @@ button {
     transform-origin: top left;
   }
 }
+
+/* Header cleanup: remove bright connector bars and PC nav pills. */
+.rail {
+  display: none;
+}
+
+.app-header {
+  box-shadow:
+    inset 0 5px 0 var(--yellow),
+    0 8px 0 #050505,
+    0 20px 24px rgba(0, 0, 0, 0.56);
+}
+
+@media (min-width: 900px) {
+  .app-header {
+    box-shadow:
+      inset 0 7px 0 var(--yellow),
+      0 9px 0 #050505,
+      0 26px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  .nav-tabs {
+    display: none;
+  }
+}
