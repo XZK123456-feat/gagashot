@@ -2091,3 +2091,45 @@ button {
 .hero-gallery__thumbs button::after {
   border-radius: 18px 6px 16px 7px / 15px 6px 14px 7px;
 }
+
+/* Mobile breathing room and temporary desktop warning-strip removal. */
+@media (max-width: 899px) {
+  body {
+    padding-inline: 12px;
+    box-sizing: border-box;
+  }
+
+  .phone-shell {
+    width: min(calc(100vw - 34px), 368px);
+    margin-inline: auto;
+    border-inline-width: 3px;
+    transform: translateX(-18px) scale(0.985);
+    transform-origin: top center;
+  }
+
+  .app-header {
+    padding-inline: 10px;
+  }
+
+  .card-stack {
+    padding-inline: 26px;
+  }
+
+  .bottom-cta {
+    padding-inline: 14px;
+  }
+}
+
+@media (min-width: 900px) {
+  .phone-shell {
+    grid-template-rows: 136px 760px auto;
+    grid-template-areas:
+      "header header"
+      "hero cards"
+      "hero cards";
+  }
+
+  .ticker {
+    display: none;
+  }
+}
