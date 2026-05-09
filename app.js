@@ -27,6 +27,10 @@ const hotCard = document.querySelector(".hot-card");
 const hotCardButton = document.querySelector(".hot-card button");
 const communityPage = document.querySelector(".community-page");
 const communityClose = document.querySelector(".community-page__close");
+const videoTeaser = document.querySelector(".video-teaser");
+const videoModal = document.querySelector(".video-modal");
+const videoModalClose = document.querySelector(".video-modal__close");
+const trailerVideo = document.querySelector(".video-modal__video");
 let weaponIndex = 0;
 let heroIndex = 0;
 let modeIndex = 0;
@@ -143,6 +147,44 @@ function closeCommunityPage() {
   hotCardButton.classList.remove("pressed");
 }
 
+function openVideoModal() {
+  videoModal.classList.add("open");
+  videoModal.setAttribute("aria-hidden", "false");
+  trailerVideo.load();
+  videoModalClose.focus();
+}
+
+function closeVideoModal() {
+  videoModal.classList.remove("open");
+  videoModal.setAttribute("aria-hidden", "true");
+  trailerVideo.pause();
+  trailerVideo.currentTime = 0;
+  videoTeaser.focus();
+}
+
+trailerVideo.addEventListener("loadedmetadata", () => {
+  videoModal.classList.add("has-video");
+});
+
+trailerVideo.addEventListener("error", () => {
+  videoModal.classList.remove("has-video");
+});
+
+videoTeaser.addEventListener("click", openVideoModal);
+videoTeaser.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    openVideoModal();
+  }
+});
+
+videoModalClose.addEventListener("click", closeVideoModal);
+videoModal.addEventListener("click", (event) => {
+  if (event.target === videoModal) {
+    closeVideoModal();
+  }
+});
+
 weaponCard.addEventListener("click", openWeaponGallery);
 weaponCard.addEventListener("keydown", (event) => {
   if (event.key === "Enter" || event.key === " ") {
@@ -225,6 +267,13 @@ communityPage.addEventListener("click", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
+  if (videoModal.classList.contains("open")) {
+    if (event.key === "Escape") {
+      closeVideoModal();
+    }
+    return;
+  }
+
   if (communityPage.classList.contains("open")) {
     if (event.key === "Escape") {
       closeCommunityPage();

@@ -33,10 +33,20 @@
       <div class="rail rail-left"></div>
       <div class="rail rail-right"></div>
 
-      <section class="hero-band" aria-label="开场信息">
-        <span class="label-tag">全新版本上线</span>
-        <strong>立即开整!</strong>
-        <em>小心嘎了!</em>
+      <section class="hero-band" aria-label="开场视频入口">
+        <button class="video-teaser" type="button" aria-label="播放嘎嘎射击宣传视频">
+          <span class="label-tag">全新版本上线</span>
+          <span class="video-copy">
+            <strong>立即开整!</strong>
+            <em>小心嘎了!</em>
+          </span>
+          <span class="video-cast" aria-hidden="true">
+            <img src="assets/character-bomber.png" alt="" />
+            <img src="assets/character-gunner.png" alt="" />
+            <img src="assets/character-rocker.png" alt="" />
+          </span>
+          <span class="video-play" aria-hidden="true"></span>
+        </button>
       </section>
 
       <div class="ticker" aria-label="小心嘎了警戒线">
@@ -191,6 +201,21 @@
             <img src="assets/community/button-taptap.png" alt="" />
           </button>
           <img class="community-page__badge" src="assets/community/bottom-badge-clean.png" alt="" aria-hidden="true" />
+        </div>
+      </div>
+    </section>
+
+    <section class="video-modal" aria-hidden="true" aria-label="嘎嘎射击宣传视频">
+      <div class="video-modal__panel" role="dialog" aria-modal="true" aria-label="宣传视频播放器">
+        <button class="video-modal__close" type="button" aria-label="关闭视频">×</button>
+        <div class="video-modal__screen">
+          <video class="video-modal__video" controls preload="metadata">
+            <source src="assets/trailer.mp4" type="video/mp4" />
+          </video>
+          <div class="video-modal__placeholder">
+            <span class="video-play" aria-hidden="true"></span>
+            <b>视频待上传</b>
+          </div>
         </div>
       </div>
     </section>
