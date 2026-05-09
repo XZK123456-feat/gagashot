@@ -823,7 +823,7 @@ button {
 
 .share-button {
   color: var(--white);
-  padding: 0 11px 8px;
+  padding: 2px 11px 0;
   background: transparent url("assets/share-button-ui.png") center / 100% 100% no-repeat;
   border: 0 !important;
   border-radius: 0 !important;
@@ -833,7 +833,7 @@ button {
 
 .download-button {
   color: var(--white);
-  padding: 0 18px 8px;
+  padding: 2px 18px 0;
   background: transparent url("assets/download-button-ui.png") center / 100% 100% no-repeat;
   border: 0 !important;
   border-radius: 0 !important;
@@ -2168,9 +2168,8 @@ button {
   overflow: hidden;
   cursor: pointer;
   background:
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.56) 0 2px, transparent 2px) 0 0 / 14px 14px,
-    repeating-conic-gradient(from 6deg at 50% 54%, rgba(255, 109, 0, 0.32) 0 4deg, transparent 4deg 11deg),
-    linear-gradient(135deg, #ffe900 0%, #ffb300 46%, #ff7a00 100%);
+    radial-gradient(circle at 50% 50%, rgba(255, 233, 0, 0.16), transparent 44%),
+    linear-gradient(135deg, #202020 0%, #0c0c0c 100%);
   border: 5px solid #050505;
   border-radius: 18px 42px 18px 34px / 16px 28px 16px 24px;
   box-shadow: 7px 8px 0 #050505, inset 0 0 0 4px #fff8e6, inset 0 0 0 8px rgba(255, 122, 0, 0.75);
@@ -2186,81 +2185,17 @@ button {
 .video-teaser::before {
   inset: -36px;
   background:
-    linear-gradient(68deg, transparent 0 48%, rgba(255, 255, 255, 0.36) 48% 50%, transparent 50% 100%),
-    radial-gradient(circle at 50% 50%, transparent 0 78px, rgba(5, 5, 5, 0.18) 79px 81px, transparent 82px);
-  opacity: 0.95;
+    linear-gradient(68deg, transparent 0 48%, rgba(255, 255, 255, 0.08) 48% 50%, transparent 50% 100%),
+    linear-gradient(rgba(255, 233, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 233, 0, 0.04) 1px, transparent 1px);
+  background-size: auto, 22px 22px, 22px 22px;
+  opacity: 0.62;
 }
 
 .video-teaser::after {
   inset: 10px;
   border: 3px solid rgba(5, 5, 5, 0.8);
   border-radius: 14px 34px 14px 26px / 12px 22px 12px 20px;
-}
-
-.video-teaser .label-tag {
-  position: absolute;
-  top: 13px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-3deg);
-  z-index: 3;
-  padding: 7px 15px 8px;
-}
-
-.video-copy {
-  position: absolute;
-  top: 56px;
-  left: 18px;
-  z-index: 3;
-  display: grid;
-  justify-items: start;
-  gap: 0;
-  transform: rotate(-2deg);
-  filter: drop-shadow(4px 5px 0 #050505);
-}
-
-.video-teaser strong {
-  --text-img-w: 166px;
-  --text-img-h: 48px;
-  margin: 0;
-}
-
-.video-teaser em {
-  --text-img-w: 126px;
-  --text-img-h: 35px;
-  margin: -6px 0 0 16px;
-}
-
-.video-cast {
-  position: absolute;
-  left: 4%;
-  right: 4%;
-  bottom: -18px;
-  z-index: 1;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  opacity: 0.9;
-  filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.36));
-}
-
-.video-cast img {
-  display: block;
-  width: auto;
-  height: 138px;
-  object-fit: contain;
-}
-
-.video-cast img:nth-child(1) {
-  transform: scaleX(-1) rotate(-6deg) translateY(6px);
-}
-
-.video-cast img:nth-child(2) {
-  height: 154px;
-  transform: rotate(2deg);
-}
-
-.video-cast img:nth-child(3) {
-  transform: rotate(7deg) translateY(10px);
 }
 
 .video-play {
@@ -2397,42 +2332,6 @@ button {
 
   .video-teaser {
     min-height: 520px;
-  }
-
-  .video-teaser .label-tag {
-    top: 38px;
-    --text-img-w: 220px;
-    --text-img-h: 42px;
-  }
-
-  .video-copy {
-    top: 108px;
-    left: 62px;
-    gap: 4px;
-  }
-
-  .video-teaser strong {
-    --text-img-w: 276px;
-    --text-img-h: 80px;
-  }
-
-  .video-teaser em {
-    --text-img-w: 214px;
-    --text-img-h: 58px;
-  }
-
-  .video-cast {
-    left: 7%;
-    right: 7%;
-    bottom: -36px;
-  }
-
-  .video-cast img {
-    height: 330px;
-  }
-
-  .video-cast img:nth-child(2) {
-    height: 370px;
   }
 
   .video-play {
