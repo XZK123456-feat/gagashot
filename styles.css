@@ -212,7 +212,7 @@ button {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
-  background: #202222 url("assets/mobile-bg.png") center top / 100% auto repeat-y;
+  background: #202222 url("assets/mobile-bg.webp") center top / 100% auto repeat-y;
   border-inline: 4px solid #0a0a0a;
   box-shadow: 0 0 0 4px var(--yellow), 0 0 44px rgba(0, 0, 0, 0.65);
   scrollbar-width: thin;
@@ -824,7 +824,7 @@ button {
 .share-button {
   color: var(--white);
   padding: 2px 11px 0;
-  background: transparent url("assets/share-button-ui.png") center / 100% 100% no-repeat;
+  background: transparent url("assets/share-button-ui.webp") center / 100% 100% no-repeat;
   border: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -834,7 +834,7 @@ button {
 .download-button {
   color: var(--white);
   padding: 2px 18px 0;
-  background: transparent url("assets/download-button-ui.png") center / 100% 100% no-repeat;
+  background: transparent url("assets/download-button-ui.webp") center / 100% 100% no-repeat;
   border: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -1356,7 +1356,7 @@ button {
     overflow: visible;
     background:
       radial-gradient(circle at 74% 12%, rgba(255, 233, 0, 0.14), transparent 24%),
-      #202222 url("assets/mobile-bg.png") center top / 420px auto repeat;
+      #202222 url("assets/mobile-bg.webp") center top / 420px auto repeat;
     border: 5px solid #050505;
     box-shadow: 0 0 0 5px var(--yellow), 14px 16px 0 #050505, 0 0 70px rgba(0, 0, 0, 0.72);
   }
@@ -1752,7 +1752,7 @@ button {
     background:
       radial-gradient(circle at 23% 30%, rgba(255, 233, 0, 0.13), transparent 23%),
       radial-gradient(circle at 78% 17%, rgba(240, 90, 0, 0.15), transparent 22%),
-      #202222 url("assets/mobile-bg.png") center top / 520px auto repeat;
+      #202222 url("assets/mobile-bg.webp") center top / 520px auto repeat;
   }
 
   .phone-shell::after {
