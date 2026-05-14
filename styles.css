@@ -725,14 +725,23 @@ button {
   min-height: 90px;
   padding: 18px 17px;
   background:
-    repeating-linear-gradient(135deg, var(--yellow) 0 12px, #111 12px 24px) top / 100% 12px no-repeat,
-    repeating-linear-gradient(135deg, var(--yellow) 0 12px, #111 12px 24px) bottom / 100% 12px no-repeat,
+    repeating-linear-gradient(135deg, var(--yellow) 0 12px, #111 12px 24px) 0 0 / 24px 12px repeat-x,
+    repeating-linear-gradient(135deg, var(--yellow) 0 12px, #111 12px 24px) 0 100% / 24px 12px repeat-x,
   #181818;
   border: 5px solid #050505;
   box-shadow: var(--shadow);
   cursor: pointer;
+  animation: hot-stripe-scroll 0.5s linear infinite;
   transition: transform 180ms ease, filter 180ms ease, box-shadow 180ms ease;
   will-change: transform;
+}
+
+.hot-card:hover {
+  animation-play-state: paused;
+}
+
+@keyframes hot-stripe-scroll {
+  to { background-position: -24px 0, -24px 100%; }
 }
 
 .hot-card:hover,
@@ -1282,6 +1291,7 @@ button {
   .feature-card,
   .community-page__panel,
   .ticker,
+  .hot-card,
   .hot-card button,
   .bottom-cta button::after,
   .download-button {
