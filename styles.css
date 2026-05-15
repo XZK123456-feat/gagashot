@@ -1686,6 +1686,10 @@ button {
     padding-top: 20px;
   }
 
+  .thumb-strip {
+    max-width: 130px;
+  }
+
   .thumb-strip button::after {
     border-radius: 6px;
   }
