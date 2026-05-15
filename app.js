@@ -51,6 +51,7 @@ function loadDeferredImages(root) {
       { once: true },
     );
 
+    img.loading = "eager";
     img.src = img.dataset.src;
     img.dataset.loaded = "true";
   });
