@@ -994,7 +994,7 @@ button {
 
 .thumb-strip {
   position: relative;
-  width: 10%;
+  width: 35%;
   margin: 0 auto;
 }
 
@@ -1687,7 +1687,7 @@ button {
   }
 
   .thumb-strip {
-    max-width: 130px;
+    max-width: 350px;
   }
 
   .thumb-strip button::after {
