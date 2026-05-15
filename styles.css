@@ -994,7 +994,8 @@ button {
 
 .thumb-strip {
   position: relative;
-  width: 100%;
+  width: 75%;
+  margin: 0 auto;
 }
 
 .thumb-strip img {
