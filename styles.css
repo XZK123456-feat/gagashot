@@ -1141,9 +1141,9 @@ button {
 .community-page__panel .community-page__badge {
   position: absolute;
   z-index: 5;
-  left: 24.13%;
-  bottom: 1.15%;
-  width: 51.74%;
+  left: 21.55%;
+  bottom: 0.3%;
+  width: 56.91%;
   height: auto;
   pointer-events: none;
 }
