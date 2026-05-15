@@ -1068,7 +1068,7 @@ button {
 
 .community-page__panel {
   position: relative;
-  width: min(100%, 392px);
+  width: min(100%, 350px);
   max-height: 94vh;
   padding: 8px;
   overflow-y: auto;
@@ -1696,7 +1696,7 @@ button {
   }
 
   .community-page__panel {
-    width: min(94vw, 560px);
+    width: min(94vw, 500px);
     max-height: 92vh;
   }
 }
