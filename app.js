@@ -37,24 +37,33 @@ let modeIndex = 0;
 
 function loadDeferredImages(root) {
   root.querySelectorAll("img[data-src]").forEach((img) => {
-    if (img.dataset.loaded === "true") {
-      return;
-    }
-
-    img.addEventListener(
-      "error",
-      () => {
-        if (img.dataset.fallback && img.src !== img.dataset.fallback) {
-          img.src = img.dataset.fallback;
-        }
-      },
-      { once: true },
-    );
-
-    img.loading = "eager";
-    img.src = img.dataset.src;
-    img.dataset.loaded = "true";
+    loadDeferredImage(img);
   });
+}
+
+function loadDeferredImage(img) {
+  if (!img || img.dataset.loaded === "true") {
+    return;
+  }
+
+  img.addEventListener(
+    "error",
+    () => {
+      if (img.dataset.fallback && img.src !== img.dataset.fallback) {
+        img.src = img.dataset.fallback;
+      }
+    },
+    { once: true },
+  );
+
+  img.loading = "eager";
+  img.src = img.dataset.src;
+  img.dataset.loaded = "true";
+}
+
+function loadGalleryImage(track, index) {
+  const slide = track.children[index];
+  loadDeferredImage(slide?.querySelector("img[data-src]"));
 }
 
 menuButton.addEventListener("click", () => {
@@ -96,6 +105,7 @@ function setHeroIndex(nextIndex) {
     thumb.classList.toggle("active", isActive);
     thumb.setAttribute("aria-pressed", String(isActive));
   });
+  loadGalleryImage(heroTrack, heroIndex);
 }
 
 function setWeaponIndex(nextIndex) {
@@ -107,6 +117,7 @@ function setWeaponIndex(nextIndex) {
     thumb.classList.toggle("active", isActive);
     thumb.setAttribute("aria-pressed", String(isActive));
   });
+  loadGalleryImage(weaponTrack, weaponIndex);
 }
 
 function setModeIndex(nextIndex) {
@@ -118,10 +129,10 @@ function setModeIndex(nextIndex) {
     thumb.classList.toggle("active", isActive);
     thumb.setAttribute("aria-pressed", String(isActive));
   });
+  loadGalleryImage(modeTrack, modeIndex);
 }
 
 function openHeroGallery() {
-  loadDeferredImages(heroGallery);
   heroGallery.classList.add("open");
   heroGallery.setAttribute("aria-hidden", "false");
   setHeroIndex(heroIndex);
@@ -135,7 +146,6 @@ function closeHeroGallery() {
 }
 
 function openWeaponGallery() {
-  loadDeferredImages(weaponGallery);
   weaponGallery.classList.add("open");
   weaponGallery.setAttribute("aria-hidden", "false");
   setWeaponIndex(weaponIndex);
@@ -149,7 +159,6 @@ function closeWeaponGallery() {
 }
 
 function openModeGallery() {
-  loadDeferredImages(modeGallery);
   modeGallery.classList.add("open");
   modeGallery.setAttribute("aria-hidden", "false");
   setModeIndex(modeIndex);

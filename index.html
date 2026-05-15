@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>嘎嘎射击 - Quack Strike</title>
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
   </head>
   <body>
     <main class="phone-shell" aria-label="嘎嘎射击手机页面">
@@ -54,7 +54,10 @@
             <span>失控冒火赛</span>
             <h2>武器库!</h2>
           </div>
-          <img class="character gunner" src="assets/character-gunner.png" alt="持枪鸭子角色" loading="eager" fetchpriority="high" />
+          <picture>
+            <source srcset="assets/character-gunner.webp" type="image/webp" />
+            <img class="character gunner" src="assets/character-gunner.png" alt="持枪鸭子角色" loading="eager" fetchpriority="high" />
+          </picture>
           <b class="announce">全平台公测中!</b>
         </article>
 
@@ -63,7 +66,10 @@
             <span>失控艺术家</span>
             <h2>英雄库!</h2>
           </div>
-          <img class="character bomber" src="assets/character-bomber.png" alt="炸弹紫鸟角色" loading="eager" fetchpriority="high" />
+          <picture>
+            <source srcset="assets/character-bomber.webp" type="image/webp" />
+            <img class="character bomber" src="assets/character-bomber.png" alt="炸弹紫鸟角色" loading="eager" fetchpriority="high" />
+          </picture>
           <b class="announce">全平台公测中!</b>
         </article>
 
@@ -72,7 +78,10 @@
             <span>即兴演出算啥</span>
             <h2>模式库!</h2>
           </div>
-          <img class="character rocker" src="assets/character-rocker.png" alt="吉他鸟角色" loading="eager" fetchpriority="high" />
+          <picture>
+            <source srcset="assets/character-rocker.webp" type="image/webp" />
+            <img class="character rocker" src="assets/character-rocker.png" alt="吉他鸟角色" loading="eager" fetchpriority="high" />
+          </picture>
           <b class="announce">全平台公测中!</b>
         </article>
 
@@ -179,6 +188,18 @@
         <button class="community-page__close" type="button" aria-label="关闭社区热议">×</button>
         <div class="community-page__art">
           <img class="community-page__base" data-src="assets/community-page.webp" data-fallback="assets/community-page.png" alt="关注我们，获取最新资讯与福利" loading="lazy" decoding="async" />
+          <div class="community-warning community-warning--top" aria-hidden="true">
+            <div class="community-warning__track">
+              <img data-src="assets/warning-strip.webp" alt="" loading="lazy" decoding="async" />
+              <img data-src="assets/warning-strip.webp" alt="" loading="lazy" decoding="async" />
+            </div>
+          </div>
+          <div class="community-warning community-warning--bottom" aria-hidden="true">
+            <div class="community-warning__track">
+              <img data-src="assets/warning-strip.webp" alt="" loading="lazy" decoding="async" />
+              <img data-src="assets/warning-strip.webp" alt="" loading="lazy" decoding="async" />
+            </div>
+          </div>
           <button class="community-link community-link--qq" type="button" aria-label="官方QQ群">
             <img data-src="assets/community/button-qq.webp" data-fallback="assets/community/button-qq.png" alt="" loading="lazy" decoding="async" />
           </button>
@@ -217,6 +238,6 @@
       </div>
     </section>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=4"></script>
   </body>
 </html>

@@ -602,6 +602,10 @@ button {
   will-change: transform;
 }
 
+.feature-card picture {
+  display: contents;
+}
+
 .feature-card:hover .character,
 .feature-card:focus-visible .character {
   transform: translateY(-9px) scale(1.045);
@@ -1112,6 +1116,48 @@ button {
   z-index: 1;
 }
 
+.community-warning {
+  position: absolute;
+  left: 5.15%;
+  width: 89.7%;
+  height: 3.9%;
+  overflow: hidden;
+  z-index: 3;
+  pointer-events: none;
+  background: #f4c400;
+  border-block: 1px solid #050505;
+}
+
+.community-warning--top {
+  top: 2.7%;
+}
+
+.community-warning--bottom {
+  top: 86.55%;
+}
+
+.community-warning__track {
+  position: absolute;
+  inset: -2px 0;
+  display: flex;
+  width: max-content;
+  animation: community-warning-scroll 15s linear infinite;
+  will-change: transform;
+}
+
+.community-warning--bottom .community-warning__track {
+  animation-direction: reverse;
+}
+
+.community-warning__track img {
+  display: block;
+  width: auto;
+  height: 100%;
+  min-height: 42px;
+  flex: 0 0 auto;
+  margin-right: -8px;
+}
+
 .community-link {
   position: absolute;
   z-index: 4;
@@ -1213,6 +1259,15 @@ button {
   }
   to {
     transform: translate3d(-25%, 0, 0);
+  }
+}
+
+@keyframes community-warning-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
