@@ -988,60 +988,66 @@ button {
 }
 
 .hero-gallery__thumbs {
-  display: grid;
-  grid-template-columns: repeat(5, 50px);
-  justify-content: center;
-  gap: 5px;
+  display: block;
   padding: 11px 10px 0;
 }
 
-.mode-gallery__thumbs {
-  grid-template-columns: repeat(3, 50px);
-}
-
-.weapon-gallery__thumbs {
-  grid-template-columns: repeat(6, 46px);
-}
-
-.hero-gallery__thumbs button {
+.thumb-strip {
   position: relative;
-  aspect-ratio: 181 / 177;
-  padding: 0;
-  overflow: visible;
-  background: transparent;
-  border: 0;
-  border-radius: 10px;
-  box-shadow: none;
-  transition: transform 140ms ease, filter 140ms ease;
+  width: 35%;
+  margin: 0 auto;
 }
 
-.hero-gallery__thumbs button::after {
-  content: "";
-  position: absolute;
-  inset: -1px;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  pointer-events: none;
-  transition: border-color 140ms ease, box-shadow 140ms ease;
-}
-
-.hero-gallery__thumbs button.active,
-.hero-gallery__thumbs button:hover {
-  transform: translateY(-1px) scale(1.018);
-  filter: saturate(1.04) brightness(1.02);
-}
-
-.hero-gallery__thumbs button.active::after,
-.hero-gallery__thumbs button:hover::after {
-  border-color: var(--yellow);
-  box-shadow: 0 0 0 2px #050505, 0 2px 0 rgba(0, 0, 0, 0.65);
-}
-
-.hero-gallery__thumbs img {
+.thumb-strip img {
   display: block;
   width: 100%;
+  height: auto;
+}
+
+.thumb-strip button {
+  position: absolute;
+  top: 0;
   height: 100%;
-  object-fit: contain;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  transition: transform 120ms cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+.thumb-strip button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  pointer-events: none;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.thumb-strip button.active {
+  transform: translateY(-1px) scale(1.018);
+  z-index: 2;
+}
+
+.thumb-strip button.active::after {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 1px #050505, 0 2px 0 rgba(0, 0, 0, 0.68);
+}
+
+.thumb-strip button:hover {
+  transform: translateY(-1px) scale(1.012);
+  z-index: 1;
+}
+
+.thumb-strip button:hover::after {
+  border-color: rgba(255, 224, 0, 0.75);
+}
+
+.thumb-strip button:active {
+  transform: scale(0.95);
+  transition: transform 60ms ease;
 }
 
 .community-page {
@@ -1069,7 +1075,7 @@ button {
 
 .community-page__panel {
   position: relative;
-  width: min(100%, 392px);
+  width: min(100%, 380px);
   max-height: 94vh;
   padding: 8px;
   overflow-y: auto;
@@ -1142,9 +1148,9 @@ button {
 .community-page__panel .community-page__badge {
   position: absolute;
   z-index: 5;
-  left: 30.1%;
-  bottom: 1.15%;
-  width: 39.8%;
+  left: 21.55%;
+  bottom: -10%;
+  width: 56.91%;
   height: auto;
   pointer-events: none;
 }
@@ -1677,27 +1683,19 @@ button {
   }
 
   .hero-gallery__thumbs {
-    grid-template-columns: repeat(5, 72px);
-    gap: 12px;
     padding-top: 20px;
   }
 
-  .mode-gallery__thumbs {
-    grid-template-columns: repeat(3, 72px);
+  .thumb-strip {
+    max-width: 350px;
   }
 
-  .weapon-gallery__thumbs {
-    grid-template-columns: repeat(6, 64px);
-    gap: 10px;
-  }
-
-  .hero-gallery__thumbs button::after {
-    inset: -1px;
-    border-radius: 13px;
+  .thumb-strip button::after {
+    border-radius: 6px;
   }
 
   .community-page__panel {
-    width: min(94vw, 560px);
+    width: min(94vw, 540px);
     max-height: 92vh;
   }
 }
@@ -2089,8 +2087,8 @@ button {
   border-radius: 14px 6px 14px 6px / 18px 6px 18px 6px;
 }
 
-.hero-gallery__thumbs button::after {
-  border-radius: 18px 6px 16px 7px / 15px 6px 14px 7px;
+.thumb-strip button::after {
+  border-radius: 6px 3px 7px 3px / 5px 3px 6px 3px;
 }
 
 /* Mobile breathing room and temporary desktop warning-strip removal. */
