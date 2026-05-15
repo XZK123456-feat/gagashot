@@ -1012,28 +1012,29 @@ button {
   border: 0;
   border-radius: 10px;
   box-shadow: none;
-  transition: transform 160ms ease;
+  transition: transform 140ms ease, filter 140ms ease;
 }
 
 .hero-gallery__thumbs button::after {
   content: "";
   position: absolute;
-  inset: -3px;
+  inset: -1px;
   border: 2px solid transparent;
-  border-radius: 13px;
+  border-radius: 12px;
   pointer-events: none;
-  transition: border-color 160ms ease, box-shadow 160ms ease;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
 }
 
 .hero-gallery__thumbs button.active,
 .hero-gallery__thumbs button:hover {
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-1px) scale(1.018);
+  filter: saturate(1.04) brightness(1.02);
 }
 
 .hero-gallery__thumbs button.active::after,
 .hero-gallery__thumbs button:hover::after {
-  border-color: #fff;
-  box-shadow: 0 0 0 3px #050505, 0 0 0 5px var(--yellow);
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 2px #050505, 0 2px 0 rgba(0, 0, 0, 0.65);
 }
 
 .hero-gallery__thumbs img {
@@ -1691,8 +1692,8 @@ button {
   }
 
   .hero-gallery__thumbs button::after {
-    inset: -4px;
-    border-radius: 16px;
+    inset: -1px;
+    border-radius: 13px;
   }
 
   .community-page__panel {

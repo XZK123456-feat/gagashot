@@ -87,29 +87,35 @@ ctaButtons.forEach((button) => {
 });
 
 function setHeroIndex(nextIndex) {
-  const total = heroThumbs.length;
+  const total = Math.min(heroThumbs.length, heroTrack.children.length);
   heroIndex = (nextIndex + total) % total;
   heroTrack.style.transform = `translateX(${-heroIndex * 100}%)`;
   heroThumbs.forEach((thumb, index) => {
-    thumb.classList.toggle("active", index === heroIndex);
+    const isActive = index === heroIndex;
+    thumb.classList.toggle("active", isActive);
+    thumb.setAttribute("aria-pressed", String(isActive));
   });
 }
 
 function setWeaponIndex(nextIndex) {
-  const total = weaponThumbs.length;
+  const total = Math.min(weaponThumbs.length, weaponTrack.children.length);
   weaponIndex = (nextIndex + total) % total;
   weaponTrack.style.transform = `translateX(${-weaponIndex * 100}%)`;
   weaponThumbs.forEach((thumb, index) => {
-    thumb.classList.toggle("active", index === weaponIndex);
+    const isActive = index === weaponIndex;
+    thumb.classList.toggle("active", isActive);
+    thumb.setAttribute("aria-pressed", String(isActive));
   });
 }
 
 function setModeIndex(nextIndex) {
-  const total = modeThumbs.length;
+  const total = Math.min(modeThumbs.length, modeTrack.children.length);
   modeIndex = (nextIndex + total) % total;
   modeTrack.style.transform = `translateX(${-modeIndex * 100}%)`;
   modeThumbs.forEach((thumb, index) => {
-    thumb.classList.toggle("active", index === modeIndex);
+    const isActive = index === modeIndex;
+    thumb.classList.toggle("active", isActive);
+    thumb.setAttribute("aria-pressed", String(isActive));
   });
 }
 
