@@ -747,7 +747,7 @@ button {
   z-index: 0;
   pointer-events: none;
   background-image: repeating-linear-gradient(135deg, var(--yellow) 0 10px, #111 10px 20px);
-  animation: hazard-scroll 0.95s linear infinite;
+  animation: hazard-scroll 0.56s linear infinite;
   will-change: background-position;
 }
 
@@ -1302,7 +1302,7 @@ button {
     background-position: 0 0;
   }
   to {
-    background-position: -48px 0;
+    background-position: -28.284271px 0;
   }
 }
 
